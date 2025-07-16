@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-soft-blue: hsl(231, 69%, 60%);
+  --color-soft-red: hsl(0, 94%, 66%);
+  --color-light-gray: hsl(229, 8%, 60%);
+  --color-light-grayish-blue: hsl(229, 31%, 21%);
+}
+
+body {
+  font-size: 1.125rem;
+  font-family: "Rubik Variable", sans-serif;
+}
