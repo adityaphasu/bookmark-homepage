@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-soft-blue: hsl(231, 69%, 60%);
-  --color-soft-red: hsl(0, 94%, 66%);
-  --color-light-gray: hsl(229, 8%, 60%);
-  --color-light-grayish-blue: hsl(229, 31%, 21%);
+  --color-soft-blue: oklch(56.573% 0.18178 271.817);
+  --color-soft-red: oklch(67.676% 0.19909 24.118);
+  --color-light-gray: oklch(66.829% 0.01951 275.485);
+  --color-light-grayish-blue: oklch(29.693% 0.04991 273.475);
 }
 
 body {
   font-size: 1.125rem;
   font-family: "Rubik Variable", sans-serif;
+}
+
+@layer base {
+  p {
+    @apply text-light-grayish-blue text-[15px] leading-[25px];
+  }
 }
