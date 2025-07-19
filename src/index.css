@@ -5,6 +5,7 @@
   --color-soft-red: oklch(67.676% 0.19909 24.118);
   --color-light-gray: oklch(66.829% 0.01951 275.485);
   --color-light-grayish-blue: oklch(29.693% 0.04991 273.475);
+  --color-light-bluish-gray: oklch(92.845% 0.02316 280.545);
 }
 
 body {
@@ -13,7 +14,12 @@ body {
 }
 
 @layer base {
+  h1,
+  h2,
+  h3 {
+    @apply text-light-grayish-blue font-medium;
+  }
   p {
-    @apply text-light-grayish-blue text-[15px] leading-[25px];
+    @apply text-light-gray text-[15px] leading-[25px];
   }
 }
