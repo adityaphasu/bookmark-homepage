@@ -1,3 +1,4 @@
+import ExtensionSection from "./components/ExtensionSection";
 import FeaturesTab from "./components/FeaturesTab";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -9,6 +10,7 @@ function App() {
       <main>
         <Hero />
         <FeaturesTab />
+        <ExtensionSection />
       </main>
     </>
   );
