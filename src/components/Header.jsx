@@ -1,16 +1,25 @@
-import { useState } from "react";
-import BookMarkLogo from "../assets/images/logo-bookmark.svg";
-import LightBookMarkLogo from "../assets/images/logo-bookmark-light.svg";
+import { useEffect, useState } from "react";
 import HamburgerMenu from "../assets/images/icon-hamburger.svg";
 import CloseMenu from "../assets/images/icon-close.svg";
-import Facebook from "../assets/images/icon-facebook.svg";
-import Twitter from "../assets/images/icon-twitter.svg";
+import Logo from "./Logo";
+import SocialLinks from "./SocialLinks";
 
 const links = ["Features", "Pricing", "Contact"];
-const socialLinks = ["Facebook", "Twitter"];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isMenuOpen]);
 
   return (
     <header>
@@ -18,10 +27,10 @@ const Header = () => {
         <div className="relative z-50 flex items-center justify-between">
           <div>
             <a href="/">
-              <img
-                src={isMenuOpen ? LightBookMarkLogo : BookMarkLogo}
-                alt="Logo"
-                aria-label="Bookmark logo"
+              <Logo
+                textFill={isMenuOpen ? "#FFF" : "#242A45"}
+                circleFill={isMenuOpen ? "#FFF" : "#5267DF"}
+                bookmarkFill={isMenuOpen ? "#252b46" : "#FFF"}
               />
             </a>
           </div>
@@ -51,16 +60,8 @@ const Header = () => {
               </button>
             </li>
           </ul>
-          <div>
-            <ul className="flex items-center justify-center gap-10 pt-8">
-              {socialLinks.map((social, index) => (
-                <li key={index}>
-                  <a href="#" className="text-white transition-colors" aria-label={social}>
-                    <img src={social === "Facebook" ? Facebook : Twitter} alt={social} />
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <div className="pt-8">
+            <SocialLinks />
           </div>
         </div>
       </nav>
