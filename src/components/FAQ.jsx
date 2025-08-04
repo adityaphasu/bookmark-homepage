@@ -27,7 +27,7 @@ const FAQs = [
 
 const FAQ = () => {
   return (
-    <section className="px-8 py-17">
+    <section className="px-8 pt-17 pb-31">
       <div className="text-center">
         <h2 className="text-2xl">Frequently Asked Questions</h2>
         <p className="mt-3.5">
@@ -58,7 +58,11 @@ const FAQItem = ({ question, answer }) => {
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}>
         <h3 className="text-light-grayish-blue text-left text-[15px] font-normal">{question}</h3>
-        <img src={Arrow} alt="" className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        <img
+          src={Arrow}
+          alt=""
+          className={`transition-transform ${isOpen ? "filter-red rotate-180" : ""}`}
+        />
       </button>
       {isOpen && <p className="py-8.5 pr-5 text-[15.25px] leading-[30px]">{answer}</p>}
     </div>

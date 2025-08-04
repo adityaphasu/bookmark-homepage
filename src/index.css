@@ -13,6 +13,11 @@ body {
   font-family: "Rubik Variable", sans-serif;
 }
 
+.social-link:hover {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(14%) saturate(3487%) hue-rotate(316deg)
+    brightness(116%) contrast(96%);
+}
+
 @layer base {
   h1,
   h2,
