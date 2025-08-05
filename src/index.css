@@ -25,6 +25,10 @@ body {
     @apply text-light-grayish-blue font-medium;
   }
   p {
-    @apply text-light-gray text-[15px] leading-[25px];
+    @apply text-light-gray text-[15px] leading-[25px] md:text-lg md:leading-[28px];
+  }
+
+  button {
+    @apply cursor-pointer;
   }
 }

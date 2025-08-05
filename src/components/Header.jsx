@@ -22,8 +22,8 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header>
-      <nav className="relative px-8 py-10">
+    <header className="mx-auto md:max-w-[76.75rem]">
+      <nav className="relative px-8 py-10 md:flex md:items-center md:justify-between lg:py-11.5 lg:pr-[3.6rem] lg:pl-16">
         <div className="relative z-50 flex items-center justify-between">
           <div>
             <a href="/">
@@ -41,26 +41,26 @@ const Header = () => {
           </div>
         </div>
         <div
-          className={`bg-light-grayish-blue/95 fixed inset-x-0 z-40 flex h-screen w-full flex-col justify-between pt-26 pb-11 transition-all ${isMenuOpen ? "top-0" : "-top-full"}`}>
-          <ul className="flex flex-col items-center justify-center gap-4 px-8">
+          className={`bg-light-grayish-blue/95 fixed inset-x-0 z-40 flex h-screen w-full flex-col justify-between pt-26 pb-11 transition-all md:relative md:h-auto md:w-auto md:bg-white md:py-0 ${isMenuOpen ? "top-0" : "-top-full"}`}>
+          <ul className="flex flex-col items-center justify-center gap-4 px-8 text-[1.285rem] md:flex-row md:gap-[47px] md:px-0 md:text-sm">
             {links.map((link, index) => (
               <li
                 key={index}
-                className="w-full border-t-[0.1px] border-neutral-50/20 pt-[18.5px] text-center">
+                className="w-full border-t-[0.1px] border-neutral-50/20 pt-[18.5px] text-center md:w-auto md:border-none md:pt-0">
                 <a
                   href="#"
-                  className="mr-3 text-[1.285rem] font-light tracking-[0.12em] text-white uppercase transition-colors">
+                  className="md:text-light-grayish-blue mr-3 font-light tracking-[0.12em] text-white uppercase transition-colors md:mr-0 md:font-normal md:tracking-wider">
                   {link}
                 </a>
               </li>
             ))}
-            <li className="w-full border-t-[0.1px] border-neutral-50/20 pt-6.5 text-center">
-              <button className="hover:text-light-grayish-blue w-full rounded-md border-2 border-white pt-2 pb-1.5 text-[1.285rem] tracking-[0.12em] text-white uppercase transition-colors hover:bg-white">
+            <li className="w-full border-t-[0.1px] border-neutral-50/20 pt-6.5 text-center md:border-none md:pt-0">
+              <button className="hover:text-light-grayish-blue md:bg-soft-red w-full rounded-md border-2 border-white pt-2 pb-1.5 tracking-[0.12em] text-white uppercase transition-colors hover:bg-white md:rounded-lg md:px-[1.93rem] md:py-2.5">
                 Login
               </button>
             </li>
           </ul>
-          <div className="pt-8">
+          <div className="pt-8 md:hidden">
             <SocialLinks />
           </div>
         </div>
