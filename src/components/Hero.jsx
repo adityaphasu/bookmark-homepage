@@ -7,7 +7,7 @@ const Hero = () => {
         <img src={HeroImage} alt="Hero" className="z-20 w-[94%] lg:w-full lg:translate-x-10" />
         <div className="bg-soft-blue absolute top-[3.6rem] right-0 z-1 h-[71.75%] w-[81%] rounded-l-full md:top-1/4 md:h-[62%] lg:-right-[6.7rem]" />
       </div>
-      <div className="flex flex-col items-center justify-center gap-4.5 p-6 text-center lg:flex-1 lg:items-start lg:justify-start lg:gap-5.5 lg:py-19.5 lg:pl-18 lg:text-left">
+      <div className="flex flex-col items-center justify-center gap-4.5 p-6 text-center lg:items-start lg:justify-start lg:gap-5.5 lg:py-19.5 lg:pl-18 lg:text-left xl:flex-1">
         <h1 className="text-3xl leading-10 md:text-5xl md:leading-13.5">
           A Simple Bookmark Manager
         </h1>
@@ -16,7 +16,7 @@ const Hero = () => {
           and see your sites load instantly. Try it for free.
         </p>
         <div className="flex w-full items-center justify-center gap-4 pt-3 text-sm font-medium lg:justify-start lg:pt-2.5">
-          <button className="bg-soft-blue shadow-light-bluish-gray rounded-md px-[1.185rem] py-3.5 text-white shadow-lg lg:px-7">
+          <button className="bg-soft-blue rounded-md px-[1.185rem] py-3.5 text-white shadow-lg shadow-blue-200 lg:px-7">
             Get it on Chrome
           </button>
           <button className="text-light-grayish-blue/80 shadow-light-bluish-gray bg-light-gray/10 rounded-md px-4.5 py-3.5 shadow-lg lg:px-6">
