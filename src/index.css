@@ -6,6 +6,7 @@
   --color-light-gray: oklch(66.829% 0.01951 275.485);
   --color-light-grayish-blue: oklch(29.693% 0.04991 273.475);
   --color-light-bluish-gray: oklch(92.845% 0.02316 280.545);
+  --breakpoint-md-lg: 56rem;
 }
 
 body {

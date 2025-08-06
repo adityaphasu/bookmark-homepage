@@ -32,9 +32,9 @@ const FeaturesTab = () => {
   const [activeFeature, setActiveFeature] = useState(features[0]);
 
   return (
-    <section className="py-23.5 text-center lg:mx-auto lg:max-w-[78.5rem] lg:py-[0.7rem]">
+    <section className="py-23.5 text-center lg:mx-auto lg:max-w-[78.5rem] lg:pt-[0.7rem]">
       <div className="px-8 pb-10 lg:mx-auto lg:max-w-[37rem]">
-        <h2 className="text-2xl lg:text-[2rem]">Features</h2>
+        <h2 className="text-2xl md:text-[2rem]">Features</h2>
         <p className="mt-[0.65rem] lg:mt-5">
           Our aim is to make it quick and easy for you to access your favourite websites. Your
           bookmarks sync between your devices so you can access them on the go.
