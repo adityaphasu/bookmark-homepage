@@ -49,7 +49,7 @@ const FeaturesTab = () => {
                 className={`relative w-full cursor-pointer py-4 text-[16.75px] transition-all lg:py-7 ${
                   activeFeature.title === feature.title
                     ? "text-light-grayish-blue font-medium"
-                    : "font-normal text-gray-500"
+                    : "hover:text-soft-red font-normal text-gray-500"
                 }`}
                 onClick={() => setActiveFeature(feature)}
                 aria-selected={activeFeature.title === feature.title}>

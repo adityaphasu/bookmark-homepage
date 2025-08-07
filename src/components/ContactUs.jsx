@@ -19,7 +19,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="bg-soft-blue flex flex-col items-center justify-center px-6 pt-16.5 pb-12 text-center md:pt-16 md:pb-15">
+    <section className="bg-soft-blue flex flex-col items-center justify-center px-6 pt-16.5 pb-12 text-center md:pt-16 md:pb-14.75">
       <div className="md:mx-auto md:max-w-114.75">
         <p className="mb-1.5 text-xs tracking-[0.4em] text-white uppercase md:ml-1.75 md:tracking-[0.48em]">
           35,000+ Already Joined
@@ -28,7 +28,7 @@ const ContactUs = () => {
           Stay up-to-date with what we're doing
         </h2>
         <form
-          className="flex w-full flex-col items-center p-3.5 px-2 md:flex-row md:gap-3.75"
+          className="flex w-full flex-col items-center p-3.5 px-2 md:flex-row md:gap-[0.96rem]"
           onSubmit={handleSubmit}
           noValidate>
           <div className="relative w-full">
@@ -58,7 +58,7 @@ const ContactUs = () => {
           )}
           <button
             type="submit"
-            className="bg-soft-red mt-4 w-full rounded-md py-3.5 text-sm font-medium text-white transition-colors hover:bg-red-500 md:mt-0 md:basis-[42.5%]">
+            className="bg-soft-red border-soft-red hover:text-soft-red mt-4 w-full rounded-md border-2 py-[12.75px] text-sm font-medium text-white transition-colors hover:bg-white md:mt-0 md:basis-[41.5%]">
             Contact Us
           </button>
         </form>

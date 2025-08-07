@@ -48,7 +48,7 @@ const ExtensionSection = () => {
             </div>
             <img src={Dots} alt="" className="mt-[.1563rem]" />
             <div className="md-lg:ml-0.5 flex items-center justify-center py-4">
-              <button className="bg-soft-blue mt-2 cursor-pointer rounded-sm px-9 py-[0.8rem] text-[15px] text-white">
+              <button className="bg-soft-blue border-soft-blue hover:text-soft-blue mt-2 cursor-pointer rounded-sm border-2 px-9 py-[0.67rem] text-[15px] font-medium text-white transition-colors hover:bg-white md:px-[1.9rem]">
                 Add & Install Extension
               </button>
             </div>

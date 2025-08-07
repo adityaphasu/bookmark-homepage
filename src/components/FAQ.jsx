@@ -27,7 +27,7 @@ const FAQs = [
 
 const FAQ = () => {
   return (
-    <section className="px-8 pt-17 pb-31 md:px-6.5 md:pt-19 lg:mx-auto lg:max-w-148 lg:pb-37.5">
+    <section className="px-8 pt-17 pb-30.5 md:px-6.5 md:pt-19 md:pb-37.5 lg:mx-auto lg:max-w-148">
       <div className="text-center">
         <h2 className="text-2xl md:text-[2rem]">Frequently Asked Questions</h2>
         <p className="mt-3.5 md:mt-4.75 md:px-2">
@@ -35,7 +35,7 @@ const FAQ = () => {
           free to email us.
         </p>
       </div>
-      <div className="md:border-light-gray/80 mt-11.5 flex flex-col gap-0.5 pb-[2.45rem] md:mt-14 md:gap-0 md:space-y-0.75 md:border-t">
+      <div className="md:border-light-gray/80 mt-11.5 flex flex-col gap-0.5 pb-[2.45rem] md:mt-14.25 md:gap-0 md:space-y-0.75 md:border-t">
         {FAQs.map((faq, index) => (
           <FAQItem key={index} question={faq.question} answer={faq.answer} />
         ))}
@@ -54,10 +54,10 @@ const FAQItem = ({ question, answer }) => {
   return (
     <div className="border-light-gray/80 border-b py-[1.115rem] text-left md:py-4">
       <button
-        className="mt-1 flex w-full items-center justify-between"
+        className="group mt-1 flex w-full items-center justify-between"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}>
-        <h3 className="text-light-grayish-blue text-left text-[15px] font-normal md:text-lg">
+        <h3 className="text-light-grayish-blue group-hover:text-soft-red text-left text-[15px] font-normal transition-colors md:text-lg">
           {question}
         </h3>
         <img

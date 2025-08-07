@@ -49,13 +49,13 @@ const Header = () => {
                 className="w-full border-t-[0.1px] border-neutral-50/20 pt-[18.5px] text-center md:w-auto md:border-none md:pt-0">
                 <a
                   href="#"
-                  className="md:text-light-grayish-blue mr-3 font-light tracking-[0.12em] text-white uppercase transition-colors md:mr-0 md:font-normal md:tracking-wider">
+                  className="md:text-light-grayish-blue hover:text-soft-red mr-3 font-light tracking-[0.12em] text-white uppercase transition-colors md:mr-0 md:font-normal md:tracking-wider">
                   {link}
                 </a>
               </li>
             ))}
             <li className="w-full border-t-[0.1px] border-neutral-50/20 pt-6.5 text-center md:border-none md:pt-0">
-              <button className="hover:text-light-grayish-blue md:bg-soft-red w-full rounded-md border-2 border-white pt-2 pb-1.5 tracking-[0.12em] text-white uppercase transition-colors hover:bg-white md:rounded-lg md:px-[1.93rem] md:py-2.5">
+              <button className="hover:text-light-grayish-blue md:bg-soft-red md:border-soft-red md:hover:text-soft-red w-full rounded-md border-2 border-white pt-2 pb-1.5 font-medium tracking-[0.12em] text-white uppercase transition-colors hover:bg-white md:px-[1.85rem] md:py-2.5">
                 Login
               </button>
             </li>
