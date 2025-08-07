@@ -28,10 +28,10 @@ const ContactUs = () => {
           Stay up-to-date with what we're doing
         </h2>
         <form
-          className="flex w-full flex-col items-center p-3.5 px-2 md:flex-row md:gap-[0.96rem]"
+          className="relative flex w-full flex-col items-center p-3.5 px-2 md:flex-row md:gap-[0.96rem]"
           onSubmit={handleSubmit}
           noValidate>
-          <div className="relative w-full">
+          <div className="over relative w-full">
             <input
               type="email"
               value={email}
@@ -40,7 +40,7 @@ const ContactUs = () => {
                 setError(false);
               }}
               placeholder="Enter your email address"
-              className={`w-full rounded-md bg-white p-[0.68rem] placeholder:text-base focus:outline-none md:pl-5 md:placeholder:text-[14.5px] ${error ? "border-soft-red border-2 pr-10" : ""}`}
+              className={`w-full rounded-md border-2 bg-white px-[0.68rem] py-2.25 transition-colors placeholder:text-base focus:outline-none md:pl-5 md:placeholder:text-[14.5px] ${error ? "border-soft-red pr-10" : "border-white"}`}
               aria-invalid={error}
             />
             {error && (
@@ -48,14 +48,15 @@ const ContactUs = () => {
                 <img src={ErrorIcon} />
               </span>
             )}
+            {error && (
+              <div className="bg-soft-red -mt-[5px] w-full rounded-b-sm px-2 text-left md:absolute md:-bottom-5.5">
+                <span className="ml-1 text-[11px] text-white italic">
+                  Whoops, make sure it's an email
+                </span>
+              </div>
+            )}
           </div>
-          {error && (
-            <div className="bg-soft-red -mt-[5px] w-full rounded-b-sm px-2 text-left">
-              <span className="ml-1 text-[11px] text-white italic">
-                Whoops, make sure it's an email
-              </span>
-            </div>
-          )}
+
           <button
             type="submit"
             className="bg-soft-red border-soft-red hover:text-soft-red mt-4 w-full rounded-md border-2 py-[12.75px] text-sm font-medium text-white transition-colors hover:bg-white md:mt-0 md:basis-[41.5%]">
