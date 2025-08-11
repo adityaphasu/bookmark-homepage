@@ -51,8 +51,7 @@ const FeaturesTab = () => {
                     ? "text-light-grayish-blue font-medium"
                     : "hover:text-soft-red font-normal text-gray-500"
                 }`}
-                onClick={() => setActiveFeature(feature)}
-                aria-selected={activeFeature.title === feature.title}>
+                onClick={() => setActiveFeature(feature)}>
                 {feature.title}
                 {activeFeature.title === feature.title && (
                   <span className="bg-soft-red absolute bottom-[0.5px] left-1/2 h-1.25 w-36 -translate-x-1/2 lg:w-full"></span>
@@ -63,7 +62,11 @@ const FeaturesTab = () => {
         </ul>
       </div>
 
-      <div className="relative md:flex md:items-center md:justify-between">
+      <div
+        role="tabpanel"
+        id={`feature-${activeFeature.title}`}
+        aria-labelledby={`tab-${activeFeature.title}`}
+        className="relative md:flex md:items-center md:justify-between">
         <div className="relative z-20 flex items-center justify-center px-8 py-18 lg:ml-11.25 lg:h-[490px]">
           <img
             src={activeFeature.illustration}

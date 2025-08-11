@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <footer className="bg-light-grayish-blue pt-9.5 pb-9 md:py-6">
       <div className="flex w-full max-w-[76.93rem] flex-col items-center gap-[2.18rem] px-8 md:mx-auto md:flex-row md:justify-between md:gap-16 md:px-15">
-        <div>
+        <a href="/" aria-label="Homepage">
           <Logo textFill="#FFF" />
-        </div>
+        </a>
         <div className="flex flex-col items-center gap-[2.18rem] md:flex-1 md:flex-row md:justify-between">
           <ul className="flex flex-col items-center gap-[1.35rem] md:flex-row md:gap-11.5">
             {links.map((link, index) => (

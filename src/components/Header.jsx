@@ -26,7 +26,7 @@ const Header = () => {
       <nav className="relative px-8 py-10 md:flex md:items-center md:justify-between lg:py-11.5 lg:pr-[3.6rem] lg:pl-16">
         <div className="relative z-50 flex items-center justify-between">
           <div>
-            <a href="/">
+            <a href="/" aria-label="Homepage">
               <Logo
                 textFill={isMenuOpen ? "#FFF" : "#242A45"}
                 circleFill={isMenuOpen ? "#FFF" : "#5267DF"}
