@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimatePresence, LayoutGroup, motion } from "motion/react";
 import Arrow from "../assets/images/icon-arrow.svg";
 import MoreButton from "./MoreButton";
 
@@ -9,9 +10,9 @@ const FAQs = [
       "Bookmark is a tool that helps you save, organize, and manage your favorite links and resources in one place.",
   },
   {
-    question: "How can i request a new browser?",
+    question: "How can I request a new browser?",
     answer:
-      "Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.",
+      "You can request a new browser by contacting our support team through the contact form on our website. We are always looking to expand our compatibility.",
   },
   {
     question: "Is there a mobile app?",
@@ -35,14 +36,20 @@ const FAQ = () => {
           free to email us.
         </p>
       </div>
-      <div className="md:border-light-gray/80 mt-11.5 flex flex-col gap-0.5 pb-[2.45rem] md:mt-14.25 md:gap-0 md:space-y-0.75 md:border-t">
-        {FAQs.map((faq, index) => (
-          <FAQItem key={index} question={faq.question} answer={faq.answer} />
-        ))}
-      </div>
-      <div className="flex justify-center md:mt-1.5">
-        <MoreButton />
-      </div>
+      <LayoutGroup>
+        <motion.div
+          layout
+          className="md:border-light-gray/80 mt-11.5 flex flex-col gap-0.5 pb-[2.45rem] md:mt-14.25 md:gap-0 md:space-y-0.75 md:border-t">
+          <AnimatePresence>
+            {FAQs.map((faq, index) => (
+              <FAQItem key={index} question={faq.question} answer={faq.answer} />
+            ))}
+          </AnimatePresence>
+        </motion.div>
+        <motion.div layout className="flex justify-center md:mt-1.5">
+          <MoreButton />
+        </motion.div>
+      </LayoutGroup>
     </section>
   );
 };
@@ -52,12 +59,14 @@ const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-light-gray/80 border-b py-[1.115rem] text-left md:py-4">
-      <button
+    <motion.div layout className="border-light-gray/80 border-b py-[1.115rem] text-left md:py-4">
+      <motion.button
+        layout
         className="group mt-1 flex w-full items-center justify-between"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}>
-        <h3 className="text-light-grayish-blue group-hover:text-soft-red text-left text-[15px] font-normal transition-colors md:text-lg">
+        <h3
+          className={`text-light-grayish-blue group-hover:text-soft-red text-left text-[15px] font-normal transition-colors md:text-lg ${isOpen ? "text-soft-red" : ""}`}>
           {question}
         </h3>
         <img
@@ -65,8 +74,19 @@ const FAQItem = ({ question, answer }) => {
           alt=""
           className={`transition-transform md:mr-5.75 ${isOpen ? "filter-red rotate-180" : ""}`}
         />
-      </button>
-      {isOpen && <p className="py-8.5 pr-5 text-[15.25px] leading-[30px]">{answer}</p>}
-    </div>
+      </motion.button>
+
+      {isOpen && (
+        <motion.p
+          layout
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.2, ease: "easeInOut" }}
+          className="py-8.5 pr-5 text-[15.25px] leading-[30px]">
+          {answer}
+        </motion.p>
+      )}
+    </motion.div>
   );
 };

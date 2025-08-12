@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import ErrorIcon from "../assets/images/icon-error.svg";
 
 const ContactUs = () => {
@@ -31,7 +32,7 @@ const ContactUs = () => {
           className="relative flex w-full flex-col items-center p-3.5 px-2 md:flex-row md:gap-[0.96rem]"
           onSubmit={handleSubmit}
           noValidate>
-          <div className="over relative w-full">
+          <div className="relative w-full">
             <input
               type="email"
               value={email}
@@ -40,21 +41,29 @@ const ContactUs = () => {
                 setError(false);
               }}
               placeholder="Enter your email address"
-              className={`w-full rounded-md border-2 bg-white px-[0.68rem] py-2.25 transition-colors placeholder:text-base focus:outline-none md:pl-5 md:placeholder:text-[14.5px] ${error ? "border-soft-red pr-10" : "border-white"}`}
+              className={`z-30 w-full rounded-md border-2 bg-white px-[0.68rem] py-2.25 transition-colors placeholder:text-base focus:outline-none md:pl-5 md:placeholder:text-[14.5px] ${error ? "border-soft-red pr-10" : "border-white"}`}
               aria-invalid={error}
             />
-            {error && (
-              <span className="absolute top-6 right-4 -translate-y-1/2">
-                <img src={ErrorIcon} />
-              </span>
-            )}
-            {error && (
-              <div className="bg-soft-red -mt-[5px] w-full rounded-b-sm px-2 text-left md:absolute md:-bottom-5.5">
-                <span className="ml-1 text-[11px] text-white italic">
-                  Whoops, make sure it's an email
-                </span>
-              </div>
-            )}
+            <AnimatePresence>
+              {error && (
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="absolute top-6 right-4 z-1 -translate-y-1/2">
+                  <img src={ErrorIcon} />
+                </motion.span>
+              )}
+              {error && (
+                <motion.div
+                  layout
+                  className="bg-soft-red z-1 -mt-[5px] w-full rounded-b-sm px-2 text-left md:absolute md:-bottom-5.5">
+                  <span className="ml-1 text-[11px] text-white italic">
+                    Whoops, make sure it's an email
+                  </span>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           <button

@@ -15,7 +15,7 @@ const Hero = () => {
           A clean and simple interface to organize your favourite websites. Open a new browser tab
           and see your sites load instantly. Try it for free.
         </p>
-        <div className="mr-1 ml-2 flex w-full items-center justify-around pt-3.25 text-sm font-medium md:ml-0.25 md:gap-3.25 md:pt-2.5 lg:justify-start">
+        <div className="mr-1 ml-2 flex w-full items-center justify-center gap-3.25 pt-3.25 text-sm font-medium md:ml-0.25 md:pt-2.5 lg:justify-start">
           <button className="bg-soft-blue border-soft-blue hover:text-soft-blue rounded border-2 px-3.5 py-3 tracking-wide text-white shadow-lg shadow-blue-200 transition-colors hover:bg-white md:px-[1.34rem]">
             Get it on Chrome
           </button>

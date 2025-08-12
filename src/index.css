@@ -38,3 +38,19 @@ body {
     @apply cursor-pointer;
   }
 }
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-soft-red);
+  border-radius: 4px;
+}
+
+* {
+  scrollbar-width: 4px;
+  scrollbar-color: var(--color-soft-red) white;
+}
