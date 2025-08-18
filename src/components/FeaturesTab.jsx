@@ -70,7 +70,7 @@ const FeaturesTab = () => {
         <motion.div
           key={activeFeature.heading}
           role="tabpanel"
-          id={activeFeature.title}
+          id={activeFeature.title.replace(/\s+/g, "-")}
           aria-labelledby={`tab-${activeFeature.title.replace(/\s+/g, "-")}`}
           className="relative md:flex md:items-center md:justify-between">
           <div className="relative z-20 flex items-center justify-center px-8 py-18 lg:ml-11.25 lg:h-[490px]">

@@ -62,6 +62,7 @@ const FAQItem = ({ question, answer }) => {
     <motion.div layout className="border-light-gray/80 border-b py-[1.115rem] text-left md:py-4">
       <motion.button
         layout
+        type="button"
         className="group mt-1 flex w-full items-center justify-between"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}>
