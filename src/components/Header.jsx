@@ -35,7 +35,7 @@ const Header = () => {
             </a>
           </div>
           <div>
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden" type="button">
               <img src={isMenuOpen ? CloseMenu : HamburgerMenu} alt="Menu" />
             </button>
           </div>
@@ -55,7 +55,9 @@ const Header = () => {
               </li>
             ))}
             <li className="w-full border-t-[0.1px] border-neutral-50/20 pt-6.5 text-center md:border-none md:pt-0">
-              <button className="hover:text-light-grayish-blue md:bg-soft-red md:border-soft-red md:hover:text-soft-red w-full rounded-md border-2 border-white pt-2 pb-1.5 font-medium tracking-[0.12em] text-white uppercase transition-colors hover:bg-white md:px-[1.85rem] md:py-2.5">
+              <button
+                type="button"
+                className="hover:text-light-grayish-blue md:bg-soft-red md:border-soft-red md:hover:text-soft-red w-full rounded-md border-2 border-white pt-2 pb-1.5 font-medium tracking-[0.12em] text-white uppercase transition-colors hover:bg-white md:px-[1.85rem] md:py-2.5">
                 Login
               </button>
             </li>

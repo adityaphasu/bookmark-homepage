@@ -65,10 +65,10 @@ const FAQItem = ({ question, answer }) => {
         className="group mt-1 flex w-full items-center justify-between"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}>
-        <h3
+        <span
           className={`text-light-grayish-blue group-hover:text-soft-red text-left text-[15px] font-normal transition-colors md:text-lg ${isOpen ? "text-soft-red" : ""}`}>
           {question}
-        </h3>
+        </span>
         <img
           src={Arrow}
           alt=""

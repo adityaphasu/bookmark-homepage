@@ -16,10 +16,14 @@ const Hero = () => {
           and see your sites load instantly. Try it for free.
         </p>
         <div className="mr-1 ml-2 flex w-full items-center justify-center gap-3.25 pt-3.25 text-sm font-medium md:ml-0.25 md:pt-2.5 lg:justify-start">
-          <button className="bg-soft-blue border-soft-blue hover:text-soft-blue rounded border-2 px-3.5 py-3 tracking-wide text-white shadow-lg shadow-blue-200 transition-colors hover:bg-white md:px-[1.34rem]">
+          <button
+            type="button"
+            className="bg-soft-blue border-soft-blue hover:text-soft-blue rounded border-2 px-3.5 py-3 tracking-wide text-white shadow-lg shadow-blue-200 transition-colors hover:bg-white md:px-[1.34rem]">
             Get it on Chrome
           </button>
-          <button className="text-light-grayish-blue/80 shadow-light-bluish-gray bg-light-gray/10 hover:border-light-grayish-blue rounded border-2 border-transparent px-4 py-3 tracking-wide shadow-lg transition-colors hover:bg-white md:px-6">
+          <button
+            type="button"
+            className="text-light-grayish-blue/80 shadow-light-bluish-gray bg-light-gray/10 hover:border-light-grayish-blue rounded border-2 border-transparent px-4 py-3 tracking-wide shadow-lg transition-colors hover:bg-white md:px-6">
             Get it on Firefox
           </button>
         </div>
