@@ -7,6 +7,7 @@ This is a bookmark landing page built with React and Vite. This is a solution to
 ### Links
 
 - Live Site URL: [Bookmark Landing Page](https://bookmark-homepage-chi.vercel.app/)
+- [Frontend Mentor](https://www.frontendmentor.io/solutions/bookmark-landing-page-react-tailwind-Kd0EtalKSl)
 
 ## Features
 
